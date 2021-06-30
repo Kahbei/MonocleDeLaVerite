@@ -1,4 +1,4 @@
-imgOrtext(false)
+imgOrtext(true)
 
 
 /**
