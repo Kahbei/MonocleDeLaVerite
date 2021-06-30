@@ -1,46 +1,5 @@
 import { questions as JSON_FILE } from "./question.js";
-
-class Question {
-    constructor(question, type, reponse, explication, proposition, image) {
-        this.question = question;
-        this.type = type;
-        this.reponse = reponse;
-        this.explication = explication;
-        this.proposition = proposition;
-        this.image = image;
-    }
-
-    isCorrectAnswer(choix) {
-        return this.response === choix;
-    }
-
-    displayQuestion() {
-        console.log("Questioin 1: " + this.question);
-    }
-}
-
-class Quiz {
-    constructor(questions) {
-        this.score = 0;
-        this.questions = questions;
-        this.currentQuestionIndex = 0;
-    }
-
-    getCurrentQuestion() {
-        return this.questions[this.currentQuestionIndex];
-    }
-
-    guess(answer) {
-        if (this.getCurrentQuestion().isCorrectAnswer(answer)) {
-            this.score++;
-        }
-        this.currentQuestionIndex++;
-    }
-
-    hasEnded() {
-        return this.currentQuestionIndex >= this.questions.length;
-    }
-}
+import { Question, Quiz } from "./Quiz.class.js";
 
 // Regroup all  functions relative to the App Display
 const display = {
@@ -48,30 +7,47 @@ const display = {
         let element = document.getElementById(id);
         element.innerHTML = text;
     },
+
     endQuiz: function () {
-        endQuizHTML = `
+        const endQuizHTML = `
         <h1>Quiz terminé !</h1>
         <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>`;
         this.elementShown("quiz", endQuizHTML);
     },
-    question: function () {
-        this.elementShown("question", quiz.getCurrentQuestion().text);
-    },
-    choices: function () {
-        let choices = quiz.getCurrentQuestion().choices;
 
-        guessHandler = (id, guess) => {
+    question: function () {
+        this.elementShown("question", quiz.getCurrentQuestion().question);
+    },
+
+    choices: function () {
+        let choices = quiz.getCurrentQuestion().proposition;
+        let type = quiz.getCurrentQuestion().type;
+
+        const guessHandler = (id, guess) => {
             document.getElementById(id).onclick = function () {
                 quiz.guess(guess);
                 quizApp();
             };
         };
-        // display choices and handle guess
+
+        // Display the choices
+        let buildChoices = "";
         for (let i = 0; i < choices.length; i++) {
-            this.elementShown("choice" + i, choices[i]);
-            guessHandler("guess" + i, choices[i]);
+            buildChoices += `
+                <button id="guess${i}" class="btn btn-outline-dark btn-lg btnReponse w-25">
+                    <p id="choice${i}" class="mt-0 mb-0">${choices[i].text}</p>
+                </button>
+            `;
+        }
+
+        this.elementShown("choices", buildChoices);
+
+        // Handle the guess
+        for (let i = 0; i < choices.length; i++) {
+            guessHandler("guess" + i, choices[i].id);
         }
     },
+
     progress: function () {
         let currentQuestionNumber = quiz.currentQuestionIndex + 1;
         this.elementShown(
@@ -92,7 +68,7 @@ const quizApp = () => {
     }
 };
 
-let test = [];
+let arrObj = [];
 
 for (const it of JSON_FILE) {
     let t = new Question(
@@ -103,11 +79,9 @@ for (const it of JSON_FILE) {
         it.proposition,
         it.image
     );
-    test.push(t);
+    arrObj.push(t);
 }
 
 // Create Quiz
-let quiz = new Quiz(test);
+let quiz = new Quiz(arrObj);
 quizApp();
-
-console.log(quiz);
