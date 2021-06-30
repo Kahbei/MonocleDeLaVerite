@@ -4,6 +4,9 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +14,34 @@
 </head>
 
 <body class="bg-dark bg-gradient text-white">
-    <nav class="navbar navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <span class="navbar-brand mb-1 h1">Le Monocle de la Vérité</span>
+            <a class="navbar-brand me-3" href="index.html">Le Monocle de la Vérité</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="quiz.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="resultat.html">Résultat</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="text-center">
-        <h1 class="mt-5 mb-5 fs-1">Bienvenue sur le quiz !</h1>
-        <p class="fs-3 mb-4">
+    <div class="text-center mt-5">
+        <h1 class="mb-5 fs-1">Le Monocle de la Vérité</h1>
+        <h2 class="mt-5 mb-5">Bienvenue sur le quiz</h2>
+        <p class="fs-4 mb-4">
             Ce quiz a pour objectif de vous faire découvrir différentes théories du complots.
             </br>Vous découvrirez aussi comment reconnaître ces théories.
         </p>
-        <p class="fs-3 mt-4 mb-4">Appuyer sur le bouton lorsque vous êtes prêt.</p>
+        <p class="fs-4 mt-4 mb-4">Appuyer sur le bouton lorsque vous êtes prêt.</p>
         <button class="btn btn-primary btn-lg mt-4">Commencer le quiz !</button>
     </div>
-    
+
 </body>
+
 </html>
