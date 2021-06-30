@@ -39,7 +39,7 @@ export const questions = [
         question:
             "Quels arguments pourraient contredire cette idée : La Terre est plate car quand je regarde l'horizon je ne vois pas la courbure de la terre, plusieurs choix peuvent être attendu",
         type: "multiple",
-        reponse: [0, 2, 3],
+        reponse: [1, 2, 4],
         explication:
             "Cet argument se base sur le fait qu'on ne peut très rarement voir la courbure de la terre cela est dû à la nôtre taille par rapport à la Terre. Pour le démontrer vous pouvez faire l'expérience suivante : Prenez un globe est placez y une caméra a sa surface vous constaterez la courbure de la terre s'aplanie. A l'opposé plus on s'élève de la surface plus on peut voir la courbure de la terre. On ne peut pas utiliser l'argument B car il pourrait contre argumenter avec un défaut de l'objectif de l'appareil (Pour plus de débunkage sur ce sujet voir : 🌎 La Terre est ronde. C'est ton encéphalogramme qui est plat. DEFAKATOR : https://youtu.be/g-2p2Ahrfts)",
         proposition: [

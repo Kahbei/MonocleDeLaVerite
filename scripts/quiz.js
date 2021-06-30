@@ -15,6 +15,10 @@ const display = {
         this.elementShown("quiz", endQuizHTML);
     },
 
+    answer: function () {
+        this.elementShown("question", quiz.getCurrentQuestion().reponse);
+    },
+
     question: function () {
         this.elementShown("question", quiz.getCurrentQuestion().question);
     },
@@ -22,12 +26,26 @@ const display = {
     choices: function () {
         let choices = quiz.getCurrentQuestion().proposition;
         let type = quiz.getCurrentQuestion().type;
+        let te = [];
 
         const guessHandler = (id, guess) => {
-            document.getElementById(id).onclick = function () {
-                quiz.guess(guess);
-                quizApp();
-            };
+            if (type === "boolean") {
+                document.getElementById(id).onclick = function () {
+                    quiz.guess(guess);
+                    quizApp();
+                };
+            } else if (type === "multiple") {
+                let resLength = quiz.getCurrentQuestion().reponse.length;
+
+                document.getElementById(id).onclick = function () {
+                    te.push(guess);
+
+                    if (te.length === resLength) {
+                        quiz.guess(te);
+                        quizApp();
+                    }
+                };
+            }
         };
 
         // Display the choices

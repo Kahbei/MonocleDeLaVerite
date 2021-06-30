@@ -9,11 +9,23 @@ export class Question {
     }
 
     isCorrectAnswer(choix) {
-        return this.reponse === choix;
-    }
+        const convert = (num) => {
+            return typeof num !== "object" ? Array.from(String(num), Number) : num;
+        };
 
-    displayQuestion() {
-        console.log("Questioin 1: " + this.question);
+        choix = convert(choix);
+        const resQuest = convert(this.reponse);
+        const choixSorted = choix.slice().sort();
+
+        return (
+            resQuest.length === choix.length &&
+            resQuest
+                .slice()
+                .sort()
+                .every(function (value, index) {
+                    return value === choixSorted[index];
+                })
+        );
     }
 }
 
@@ -33,9 +45,11 @@ export class Quiz {
             this.score++;
         }
 
-        // setTimeout(() => {
-        // }, 20);
         this.currentQuestionIndex++;
+    }
+
+    displayAnswer() {
+        return this.questions[this.currentQuestionIndex].reponse;
     }
 
     hasEnded() {
