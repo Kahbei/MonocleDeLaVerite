@@ -127,7 +127,7 @@ const display = {
         let currentQuestionNumber = quiz.listUsedQuestion.length;
         this.elementShown(
             "progress",
-            "Question " + currentQuestionNumber + " sur " + quiz.maxQuestion
+            "Question " + (currentQuestionNumber + 1) + " sur " + quiz.maxQuestion
         );
     },
 };

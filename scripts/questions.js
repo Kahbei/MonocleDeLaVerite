@@ -151,7 +151,7 @@ export const questions = [
         image: "https://www.allosymptomes.fr/wp-content/uploads/2017/01/sida.jpg",
     },
     {
-        question: "Qui a tué le présidents  John F. Kennedy?",
+        question: "Qui a tué le président John F. Kennedy?",
         type: "unique",
         reponse: 0,
         explication:
@@ -174,7 +174,7 @@ export const questions = [
                 text: "Le service Secret Russe",
             },
         ],
-        image: "https://twitter.com/WestWingReport/status/933334024831062020/photo/1",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/JFK_limousine.png/1200px-JFK_limousine.png",
     },
     {
         question: "Laquelle ou lesquelles de ces images sont fausses ?",
@@ -385,7 +385,7 @@ export const questions = [
     {
         question: "Cette photo est-elle bien réelle ?",
         type: "unique",
-        reponse: 1,
+        reponse: 0,
         explication:
             "Étonnant mais vrai : c'est à l'ouest de la capitale hollandaise sur l'île de Saint-MArtin que se trouve la plage dont tout le monde a entendu parler : Maho Beach. Elle constitue un attrait touristique mondialement connu. Et pour cause, allongé sur une serviette, vous voyez les avions, qui atterrissent à l'aéroport international Princess Juliana, passer à quelques mètres seulement au-dessus de votre tête. Elle est située en bout de piste, ce qui vous permet d'admirer la trajectoire de ces transporteurs comme si vous y étiez. Regarder les avions est devenu une activité si populaire que les horaires de départ et d'arrivée des différentes compagnies sont affichés sur un tableau dans les bars. Le Sunset Beach Bar and Grill dispose même d'une enceinte à l'extérieur qui diffuse les communications radios entre les pilotes et les contrôleurs aériens. Attention tout de même au souffle des avions au décollage, ça décoiffe !",
         proposition: [
@@ -484,7 +484,7 @@ export const questions = [
                 text: "Il manque des chiffres",
             },
             {
-                id: 0,
+                id: 3,
                 text: "Le graphique est correct",
             },
         ],
@@ -493,7 +493,7 @@ export const questions = [
     {
         question:
             "Dans un débat, faire une diversion en mettant une autre idée en avant s'appelle ? ",
-        type: "multiple",
+        type: "unique",
         reponse: 0,
         explication:
             "La réponse est agiter le chiffon rouge le but et de parler de quelque chose d'autre pour ne pas répondre à la question posé, pour contrer cette technique il faut insister sur la question pour éviter qu'il détourne le propos en son avantage",
@@ -557,7 +557,7 @@ export const questions = [
                 text: "Il manque des chiffres",
             },
             {
-                id: 0,
+                id: 3,
                 text: "Le graphique est correct",
             },
         ],
@@ -602,7 +602,7 @@ export const questions = [
     {
         question: "Cette photo a-t-elle été retouchée ?",
         type: "unique",
-        reponse: 1,
+        reponse: 0,
         explication:
             "Cette photo est retouchée on peut s'en apercevoir en regardant l'arrière de la photo, ou le parquet est déformé derrière les joueurs. ",
         proposition: [
@@ -615,7 +615,7 @@ export const questions = [
                 text: "Faux",
             },
         ],
-        image: "https://www.thesun.ie/sport/football/410946/juventus-striker-gonzalo-higuain-insists-his-abs-are-not-photoshopped-as-fans-question-whether-ripped-instagram-pic-is-real/#",
+        image: "https://www.thesun.ie/wp-content/uploads/sites/3/2017/01/gonzalo-higuian-sport_-preview-01-1.jpg",
     },
     {
         question: "Quels outils pouvons-nous utiliser pour vérifier une image?",

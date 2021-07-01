@@ -47,7 +47,6 @@ export class Quiz {
     }
 
     pickRandom() {
-        console.log(this.currentQuestionIndex);
         do {
             this.currentQuestionIndex = Math.floor(Math.random() * this.questions.length);
         } while (this.listUsedQuestion.includes(this.currentQuestionIndex));
