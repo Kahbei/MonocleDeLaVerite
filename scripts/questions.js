@@ -65,17 +65,17 @@ export const questions = [
     {
         question: "Elvis Presley a-t-il simulé sa propre mort ?",
         type: "unique",
-        reponse: 0,
+        reponse: 1,
         explication:
             "Une croyance persistante dit que The King n’est pas mort en 1977. Beaucoup de fans persistent à prétendre qu’il est encore vivant, qu’il est entré dans la clandestinité pour des raisons diverses. Cette affirmation est soutenue par des milliers de prétendues apparitions. La principale raison invoquée à propos du fait que Presley ait falsifié sa mort est que, sur sa tombe, son prénom Aron est orthographié Aaron. Mais Aaron est en fait le véritable prénom de Presley. Deux tabloïds ont publié des articles portant sur la vie continue de Presley après sa mort, dans les moindres détails. L’un des articles rapporte notamment qu’il s’est cassé une jambe dans un accident de moto, et ces journaux relatent des faits de sa vie jusqu’à sa prétendue mort réelle dans le milieu des années 1990.",
         proposition: [
             {
                 id: 0,
-                text: "Faux",
+                text: "Vrai",
             },
             {
                 id: 1,
-                text: "Vrai",
+                text: "Faux",
             },
         ],
         image: "https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/2/2018/05/hith-elvis-presley-53203711.jpg",
@@ -401,24 +401,6 @@ export const questions = [
         image: "https://www.faxinfo.fr/wp-content/uploads/2015/09/09-09-15-air-france-sint-maarten.jpg",
     },
     {
-        question: "Cette photo est-elle bien réelle ?",
-        type: "unique",
-        reponse: 1,
-        explication:
-            "Étonnant mais vrai : c'est à l'ouest de la capitale hollandaise sur l'île de Saint-Martin que se trouve la plage dont tout le monde a entendu parler : Maho Beach. Elle constitue un attrait touristique mondialement connu. Et pour cause, allongé sur une serviette, vous voyez les avions, qui atterrissent à l'aéroport international Princess Juliana, passer à quelques mètres seulement au-dessus de votre tête. Elle est située en bout de piste, ce qui vous permet d'admirer la trajectoire de ces transporteurs comme si vous y étiez. Regarder les avions est devenu une activité si populaire que les horaires de départ et d'arrivée des différentes compagnies sont affichés sur un tableau dans les bars. Le Sunset Beach Bar and Grill dispose même d'une enceinte à l'extérieur qui diffuse les communications radios entre les pilotes et les contrôleurs aériens. Attention tout de même au souffle des avions au décollage, ça décoiffe ! ",
-        proposition: [
-            {
-                id: 0,
-                text: "Vrai",
-            },
-            {
-                id: 1,
-                text: "Faux",
-            },
-        ],
-        image: "https://www.faxinfo.fr/wp-content/uploads/2015/09/09-09-15-air-france-sint-maarten.jpg",
-    },
-    {
         question: "Pour vérifier une information faut-il croiser ces sources ?",
         type: "unique",
         reponse: 0,
@@ -434,7 +416,7 @@ export const questions = [
                 text: "Faux",
             },
         ],
-        image: "https://www.faxinfo.fr/wp-content/uploads/2015/09/09-09-15-air-france-sint-maarten.jpg",
+        image: "https://resize.programme-television.ladmedia.fr/rcrop/690,388/img/var/imports/agtv/8/4/7/4187274748_169.jpg",
     },
     {
         question:
@@ -645,7 +627,7 @@ export const questions = [
     },
     {
         question:
-            "Un roman Américain publié en 1898, Futilité ou le naufrage du Titan, raconte avec une grande exactitude la construction et le naufrage du paquebot Titanic... 11 ans AVANT les fait (1912), est-ce réel ?",
+            "Un roman Américain publié en 1898, Futilité ou le naufrage du Titan, raconte avec une grande exactitude la construction et le naufrage du paquebot Titanic... 14 ans AVANT les fait (1912), est-ce réel ?",
         type: "unique",
         reponse: 0,
         explication:
