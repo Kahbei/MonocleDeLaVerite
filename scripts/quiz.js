@@ -1,4 +1,4 @@
-import { questions as JSON_FILE } from "./question.js";
+import { questions as JSON_FILE } from "./questions.js";
 import { Question, Quiz } from "./Quiz.class.js";
 
 // Regroup all  functions relative to the App Display
@@ -9,9 +9,21 @@ const display = {
     },
 
     endQuiz: function () {
+        const bareme = [
+            "Tu n'a pas d'esprit critique, pense à le travailler et ne va pas sur facebook sinon tu deviendras l'aigle.",
+            "Tu as les prémices de l'esprit critique , mais tu as encore beaucoup de travail devant toi jeune padawan.",
+            "Tu t'ouvres peu à peu au monde avec jugeote. Continue comme ça !",
+            "Tu as un bon esprit critique de base mais tu es encore loin du compte.",
+            "Tu as un très bon esprit critique, n'arrête jamais de réfléchir.",
+            "Comment peut-on être aussi omniscient ? Si tous le monde était comme toi, le monde serait bien plus calme et agréable à y vivre. Il n'y aurait plus de fausse informations car plus personne pour y croire !",
+        ];
         const endQuizHTML = `
-        <h1>Quiz terminé !</h1>
-        <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>`;
+            <div class="resultat">
+                <h1>Quiz terminé !</h1>
+                <h3> Votre score est de : ${quiz.score} / ${quiz.maxQuestion}</h3>
+                <p>${bareme[quiz.score]}</p>
+            </div>
+        `;
         this.elementShown("quiz", endQuizHTML);
     },
 
@@ -36,6 +48,7 @@ const display = {
     },
 
     question: function () {
+        quiz.pickRandom();
         this.elementShown("question", quiz.getCurrentQuestion().question);
         this.image();
     },
@@ -46,7 +59,7 @@ const display = {
         let multipleReponse = [];
 
         const guessHandler = (id, guess) => {
-            if (type === "boolean") {
+            if (type === "unique") {
                 document.getElementById(id).onclick = function () {
                     let guessAnswer = quiz.guessResult(guess);
 
@@ -111,10 +124,10 @@ const display = {
     },
 
     progress: function () {
-        let currentQuestionNumber = quiz.currentQuestionIndex + 1;
+        let currentQuestionNumber = quiz.listUsedQuestion.length;
         this.elementShown(
             "progress",
-            "Question " + currentQuestionNumber + " sur " + quiz.questions.length
+            "Question " + currentQuestionNumber + " sur " + quiz.maxQuestion
         );
     },
 };

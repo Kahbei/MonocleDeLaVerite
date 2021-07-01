@@ -42,6 +42,15 @@ export class Quiz {
         this.score = 0;
         this.questions = questions;
         this.currentQuestionIndex = 0;
+        this.maxQuestion = 5;
+        this.listUsedQuestion = [];
+    }
+
+    pickRandom() {
+        console.log(this.currentQuestionIndex);
+        do {
+            this.currentQuestionIndex = Math.floor(Math.random() * this.questions.length);
+        } while (this.listUsedQuestion.includes(this.currentQuestionIndex));
     }
 
     getCurrentQuestion() {
@@ -53,6 +62,7 @@ export class Quiz {
             this.score++;
         }
 
+        this.listUsedQuestion.push(this.currentQuestionIndex);
         this.currentQuestionIndex++;
     }
 
@@ -65,6 +75,6 @@ export class Quiz {
     }
 
     hasEnded() {
-        return this.currentQuestionIndex >= this.questions.length;
+        return this.listUsedQuestion.length >= this.maxQuestion;
     }
 }
