@@ -13,32 +13,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz sur les théories du complots</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark bg-gradient text-white">
+<body class="bg-dark bg-gradient text-white h-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand me-3" href="index.html">Le Monocle de la Vérité</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="quiz.html">Quiz</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="resultat.html">Résultat</a>
-                    </li>
-                </ul>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand me-3" href="index.html">Le Monocle de la Vérité</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="quiz.html">Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="resultat.html">Résultat</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
-    <div class="mt-5 text-center">
-        <div id="quiz">
+    <div id="divCenter" class="text-center h-50">
+        <div id="quiz" class="h-100">
             <div id="questionComplotDiv" class="mx-auto mb-4">
-                <h1 id="question" class="mb-5 w-75 fs-4 mx-auto">
+                <h1 id="question" class="mb-5 w-75 fs-4 mx-auto h-25">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation
@@ -48,15 +51,15 @@
                 </h1>
             </div>
 
-            <div id="imageComplotDiv" class="mx-auto mb-4">
-                <img class="imageComplot" src="photos/TMDC-group.jpg" alt="image complot">
+            <div id="imageComplotDiv" class="mx-auto mb-4 h-50">
+                <img id="imagePres" class="imageComplot" src="photos/EdAGGFS.jpg" alt="image complot">
             </div>
             <!--<h3 id="score" class="mb-4">Score</h3>-->
         </div>
 
 
-        <div class="w-100 h-25 mb-4">
-            <div class="mb-1">
+        <div id="buttonContainer">
+            <div id="BC1" class="mb-1 h-100">
                 <button id="guess0" class="btn btn-dark btn-lg w-25 btnReponse" onclick="rightAnswer('guess0')">
                     <p id="pchoice0" class="mt-0 mb-0 preponses">Choix 1</p>
                     <img class="ireponses imageComplot" src="photos/EdAGGFS.jpg" alt="rép 1">
@@ -64,37 +67,43 @@
 
                 <button id="guess1" class="btn btn-dark btn-lg w-25 btnReponse" onclick="rightAnswer('guess1')">
                     <p id="pchoice1" class="mt-0 mb-0 preponses">Choix 2</p>
-                    <img class="ireponses imageComplot" src="photos/EdAGGFS.jpg" alt="rép 2">
+                    <img class="ireponses imageComplot" src="photos/TMDC-group.jpg" alt="rép 2">
                 </button>
             </div>
-            <div class="mt-1">
-                <button id="guess2" class="btn btn-dark btn-lg w-25 btnReponse"
-                    onclick="rightAnswer('guess2')">
+            <div id="BC2" class="mt-1 h-100">
+                <button id="guess2" class="btn btn-dark btn-lg w-25 btnReponse" onclick="rightAnswer('guess2')">
                     <p id="pchoice2" class="mt-0 mb-0 preponses">Choix 3</p>
-                    <img class="ireponses imageComplot" src="photos/EdAGGFS.jpg" alt="rép 3">
+                    <img class="ireponses imageComplot" src="photos/colloque_complotisme.jpg" alt="rép 3">
                 </button>
 
-                <button id="guess3" class="btn btn-dark btn-lg w-25 btnReponse"
-                    onclick="wrongAnswer('guess3')">
+                <button id="guess3" class="btn btn-dark btn-lg w-25 btnReponse" onclick="wrongAnswer('guess3')">
                     <p id="pchoice3" class="mt-0 mb-0 preponses">Choix 4</p>
-                    <img class="ireponses imageComplot" src="photos/EdAGGFS.jpg" alt="rép 4">
+                    <img class="ireponses imageComplot" src="photos/090118-theorie-complot-m.jpg" alt="rép 4">
                 </button>
-                <!--
+            </div>
+            <!--
                 <h1 class="mb-5 w-75 fs-4 mx-auto">Quiz</h1>
                 <h2 id="question"></h2>
                 <h3 id="score"></h3>
                 -->
+        </div>
+
+        <div id="basPage" class="w-100 mb-4">
+            <div id="choices" class="w-100 h-25 mb-4">
             </div>
 
-            <div id="choices" class="w-100 h-25 mb-4">
+            <div id="reponse" class="w-100 h-25 mb-4">
             </div>
 
             <p id="progress" class="mt-4"></p>
         </div>
-    <script src="scripts/quiz.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="scripts/animations.js"></script>
 
+        <!--<script type="module" src="scripts/quiz.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="scripts/animations.js"></script>
+    </div>
 </body>
 
 </html>
