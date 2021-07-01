@@ -15,8 +15,14 @@ const display = {
         this.elementShown("quiz", endQuizHTML);
     },
 
-    answer: function () {
-        this.elementShown("question", quiz.getCurrentQuestion().reponse);
+    explication: function () {
+        const explication = `
+            <div class="explication">
+                <p>${quiz.getExplication()}</p>
+                <button id="next" class="btn btn-light btn-outline-dark">Suivant</button>
+            </div>
+        `;
+        this.elementShown("explication", explication);
     },
 
     question: function () {
@@ -26,23 +32,42 @@ const display = {
     choices: function () {
         let choices = quiz.getCurrentQuestion().proposition;
         let type = quiz.getCurrentQuestion().type;
-        let te = [];
+        let multipleReponse = [];
 
         const guessHandler = (id, guess) => {
             if (type === "boolean") {
                 document.getElementById(id).onclick = function () {
+                    let guessAnswer = quiz.guessResult(guess);
+
+                    if (guessAnswer) {
+                        document.getElementById(id).style.backgroundColor = "#22d442";
+                    } else {
+                        document.getElementById(id).style.backgroundColor = "#910f1c";
+                    }
+
                     quiz.guess(guess);
-                    quizApp();
+                    document.querySelectorAll("button").forEach((e) => (e.disabled = true));
+                    quizApp(true);
                 };
             } else if (type === "multiple") {
                 let resLength = quiz.getCurrentQuestion().reponse.length;
 
                 document.getElementById(id).onclick = function () {
-                    te.push(guess);
+                    let guessAnswer = quiz.guessResult(guess);
 
-                    if (te.length === resLength) {
-                        quiz.guess(te);
-                        quizApp();
+                    if (guessAnswer) {
+                        document.getElementById(id).style.backgroundColor = "#22d442";
+                    } else {
+                        document.getElementById(id).style.backgroundColor = "#910f1c";
+                    }
+
+                    multipleReponse.push(guess);
+                    document.getElementById(id).disabled = true;
+
+                    if (multipleReponse.length === resLength) {
+                        quiz.guess(multipleReponse);
+                        document.querySelectorAll("button").forEach((e) => (e.disabled = true));
+                        quizApp(true);
                     }
                 };
             }
@@ -76,20 +101,39 @@ const display = {
 };
 
 // Game logic
-const quizApp = () => {
-    if (quiz.hasEnded()) {
-        display.endQuiz();
+const quizApp = (t) => {
+    if (!t) {
+        if (quiz.hasEnded()) {
+            display.endQuiz();
+        } else {
+            display.question();
+            display.choices();
+            display.progress();
+        }
     } else {
-        display.question();
-        display.choices();
-        display.progress();
+        if (quiz.hasEnded()) {
+            display.explication();
+            document.getElementById("next").onclick = () => {
+                document.querySelector(".explication").style.display = "none";
+                display.endQuiz();
+            };
+        } else {
+            display.explication();
+
+            document.getElementById("next").onclick = () => {
+                document.querySelector(".explication").style.display = "none";
+                display.question();
+                display.choices();
+                display.progress();
+            };
+        }
     }
 };
 
 let arrObj = [];
 
 for (const it of JSON_FILE) {
-    let t = new Question(
+    let questionObject = new Question(
         it.question,
         it.type,
         it.reponse,
@@ -97,7 +141,7 @@ for (const it of JSON_FILE) {
         it.proposition,
         it.image
     );
-    arrObj.push(t);
+    arrObj.push(questionObject);
 }
 
 // Create Quiz

@@ -13,19 +13,27 @@ export class Question {
             return typeof num !== "object" ? Array.from(String(num), Number) : num;
         };
 
-        choix = convert(choix);
-        const resQuest = convert(this.reponse);
-        const choixSorted = choix.slice().sort();
+        const resQuest = convert(this.reponse).slice().sort();
+        const choixSorted = convert(choix).slice().sort();
 
         return (
-            resQuest.length === choix.length &&
-            resQuest
-                .slice()
-                .sort()
-                .every(function (value, index) {
-                    return value === choixSorted[index];
-                })
+            resQuest.length === choixSorted.length &&
+            resQuest.every((value, index) => {
+                return value === choixSorted[index];
+            })
         );
+    }
+
+    showCorrectAnswer(choix) {
+        const convert = (num) => {
+            return typeof num !== "object" ? Array.from(String(num), Number) : num;
+        };
+
+        const resQuest = convert(this.reponse).slice().sort();
+        // const choixSorted = convert(choix).slice().sort();
+
+        // return choixSorted.map((e) => resQuest.includes(e));
+        return resQuest.includes(choix);
     }
 }
 
@@ -48,8 +56,12 @@ export class Quiz {
         this.currentQuestionIndex++;
     }
 
-    displayAnswer() {
-        return this.questions[this.currentQuestionIndex].reponse;
+    guessResult(answer) {
+        return this.getCurrentQuestion().showCorrectAnswer(answer);
+    }
+
+    getExplication() {
+        return this.questions[this.currentQuestionIndex - 1].explication;
     }
 
     hasEnded() {
