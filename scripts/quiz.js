@@ -76,11 +76,19 @@ const display = {
         // Display the choices
         let buildChoices = "";
         for (let i = 0; i < choices.length; i++) {
-            buildChoices += `
-                <button id="guess${i}" class="btn btn-outline-dark btn-lg btnReponse w-25">
-                    <p id="choice${i}" class="mt-0 mb-0">${choices[i].text}</p>
-                </button>
-            `;
+            if (type === "image") {
+                buildChoices += `
+                    <button id="guess${i}" class="btn btn-dark btn-lg btnReponse w-25">
+                        <img class="ireponses imageComplot" src="${choices[i].image}" alt="choix${i}">
+                    </button>
+                `;
+            } else {
+                buildChoices += `
+                    <button id="guess${i}" class="btn btn-dark btn-lg btnReponse w-25">
+                        <p id="choice${i}" class="mt-0 mb-0 presponses">${choices[i].text}</p>
+                    </button>
+                `;
+            }
         }
 
         this.elementShown("choices", buildChoices);
