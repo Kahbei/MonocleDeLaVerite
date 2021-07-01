@@ -1,4 +1,4 @@
-imgOrtext(false)
+imgOrtext(true)
 
 /**
  * fonction pour afficher la correction une fois les réponses entrées
