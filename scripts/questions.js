@@ -109,7 +109,7 @@ export const questions = [
     {
         question: "Ce document est-il un document officiel du gouvernement ?",
         type: "unique",
-        reponse: 2,
+        reponse: 1,
         explication:
             "Ce document est complètement faux, pour le voir on peut d'abord vérifier les fautes d'orthographe ensuite on peut regarder la référence du document enfin il faut vérifier les sources du document afin de voir si il est sourcé . Plus d'information sur la création du document sur la vidéo suivante : https://www.youtube.com/watch?v=OOOkt2_PWc4",
         proposition: [
