@@ -10,7 +10,7 @@ const display = {
 
     endQuiz: function () {
         const bareme = [
-            "Tu n'a pas d'esprit critique, pense à le travailler et ne va pas sur facebook sinon tu deviendras l'aigle.",
+            "Tu n'as pas d'esprit critique, pense à le travailler et ne va pas sur facebook sinon tu deviendras l'aigle.",
             "Tu as les prémices de l'esprit critique , mais tu as encore beaucoup de travail devant toi jeune padawan.",
             "Tu t'ouvres peu à peu au monde avec jugeote. Continue comme ça !",
             "Tu as un bon esprit critique de base mais tu es encore loin du compte.",
@@ -38,12 +38,11 @@ const display = {
     },
 
     image: function () {
-        const ifImage = quiz.getCurrentQuestion().image
-            ? `src="${quiz.getCurrentQuestion().image}" alt="Illustration de la question" `
-            : "src=''";
-        const displayImage = `
-            <img id="imagePres" class="imageComplot" ${ifImage}>
-        `;
+        const displayImage = quiz.getCurrentQuestion().image
+            ? `<img id="imagePres" class="imageComplot" src="${
+                  quiz.getCurrentQuestion().image
+              }" alt="Illustration de la question"> `
+            : "";
         this.elementShown("imageComplotDiv", displayImage);
     },
 

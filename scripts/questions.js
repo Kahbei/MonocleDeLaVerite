@@ -285,7 +285,7 @@ export const questions = [
     {
         question: "Comment est mort Adolf Hitler ?",
         type: "unique",
-        reponse: 0,
+        reponse: 2,
         explication:
             "Adolf Hitler s'est suicidé le 30 avril 1945 dans son bunker, à Berlin. L'Armée rouge est alors aux portes de la capitale du IIIe Reich. Le führer est en proie à de violentes crises de démence. Son entourage sait la guerre perdue, et la plupart tombent dans la débauche ou tentent de fuir.",
         proposition: [
@@ -387,7 +387,7 @@ export const questions = [
         type: "unique",
         reponse: 0,
         explication:
-            "Étonnant mais vrai : c'est à l'ouest de la capitale hollandaise sur l'île de Saint-MArtin que se trouve la plage dont tout le monde a entendu parler : Maho Beach. Elle constitue un attrait touristique mondialement connu. Et pour cause, allongé sur une serviette, vous voyez les avions, qui atterrissent à l'aéroport international Princess Juliana, passer à quelques mètres seulement au-dessus de votre tête. Elle est située en bout de piste, ce qui vous permet d'admirer la trajectoire de ces transporteurs comme si vous y étiez. Regarder les avions est devenu une activité si populaire que les horaires de départ et d'arrivée des différentes compagnies sont affichés sur un tableau dans les bars. Le Sunset Beach Bar and Grill dispose même d'une enceinte à l'extérieur qui diffuse les communications radios entre les pilotes et les contrôleurs aériens. Attention tout de même au souffle des avions au décollage, ça décoiffe !",
+            "Étonnant mais vrai : c'est à l'ouest de la capitale hollandaise sur l'île de Saint-Martin que se trouve la plage dont tout le monde a entendu parler : Maho Beach. Elle constitue un attrait touristique mondialement connu. Et pour cause, allongé sur une serviette, vous voyez les avions, qui atterrissent à l'aéroport international Princess Juliana, passer à quelques mètres seulement au-dessus de votre tête. Elle est située en bout de piste, ce qui vous permet d'admirer la trajectoire de ces transporteurs comme si vous y étiez. Regarder les avions est devenu une activité si populaire que les horaires de départ et d'arrivée des différentes compagnies sont affichés sur un tableau dans les bars. Le Sunset Beach Bar and Grill dispose même d'une enceinte à l'extérieur qui diffuse les communications radios entre les pilotes et les contrôleurs aériens. Attention tout de même au souffle des avions au décollage, ça décoiffe !",
         proposition: [
             {
                 id: 0,
