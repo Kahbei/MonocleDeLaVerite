@@ -68,6 +68,36 @@ export const questions = [
                 text: "F",
             },
         ],
-        image: "https://trendly.fr/wp-content/uploads/sites/3/2016/08/theorie-complot-princesse-diana.jpg",
+        image: "",
+    },
+    {
+        question: "Laquelle ou lesquelles de ces images sont fausses ?",
+        type: "images",
+        reponse: [0, 1],
+        explication:
+            "Sur la premier photo on peut constater que le sourcil de la dame lui est poussé sur les cheveux et sur la photo deux on peut voir que les immeubles se répètent. ",
+        proposition: [
+            {
+                id: 0,
+                text: "https://pbs.twimg.com/media/DylymElWwAAKK8f.jpg",
+            },
+
+            {
+                id: 1,
+                text: "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.6435-9/56222407_2166067607039012_8208994378941726720_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_ohc=dBfYTYco8L8AX-WJ6za&_nc_ht=scontent.fcdg1-1.fna&oh=727c30fc6bffa425cec6cec08cc2d7a0&oe=60E21614",
+            },
+
+            {
+                id: 2,
+                text: "https://boowiki.info/images/a540_11/220px-Camaleonte.jpg ",
+            },
+
+            {
+                id: 3,
+                text: "https://www.sciencesetavenir.fr/assets/img/2019/06/11/cover-r4x3w1000-5cffd1a2a5b76-033-ria10-805903-5315.jpg",
+            },
+        ],
+
+        image: "",
     },
 ];

@@ -25,8 +25,19 @@ const display = {
         this.elementShown("explication", explication);
     },
 
+    image: function () {
+        const ifImage = quiz.getCurrentQuestion().image
+            ? `src="${quiz.getCurrentQuestion().image}" alt="Illustration de la question" `
+            : "src=''";
+        const displayImage = `
+            <img id="imagePres" class="imageComplot" ${ifImage}>
+        `;
+        this.elementShown("imageComplotDiv", displayImage);
+    },
+
     question: function () {
         this.elementShown("question", quiz.getCurrentQuestion().question);
+        this.image();
     },
 
     choices: function () {
@@ -49,7 +60,7 @@ const display = {
                     document.querySelectorAll("button").forEach((e) => (e.disabled = true));
                     quizApp(true);
                 };
-            } else if (type === "multiple") {
+            } else if (type === "multiple" || type === "images") {
                 let resLength = quiz.getCurrentQuestion().reponse.length;
 
                 document.getElementById(id).onclick = function () {
@@ -76,10 +87,10 @@ const display = {
         // Display the choices
         let buildChoices = "";
         for (let i = 0; i < choices.length; i++) {
-            if (type === "image") {
+            if (type === "images") {
                 buildChoices += `
                     <button id="guess${i}" class="btn btn-dark btn-lg btnReponse w-25">
-                        <img class="ireponses imageComplot" src="${choices[i].image}" alt="choix${i}">
+                        <img class="ireponses imageComplot" src="${choices[i].text}" alt="choix${i}">
                     </button>
                 `;
             } else {
