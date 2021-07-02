@@ -28,9 +28,13 @@
     max-width: 15rem;
 }
 
+.imgBarem {
+    max-width: 40%;
+}
+
 @media screen and (max-width: 540px) {
     .imgBarem {
-        width: 100%;
+        max-width: 100%;
     }
 
     .btnReponse {
