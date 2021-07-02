@@ -223,7 +223,7 @@ export const questions = [
     {
         question: "Cette photo est-elle trafiquée ?",
         type: "unique",
-        reponse: 1,
+        reponse: 0,
         explication:
             "En 1934, Robert Kenneth Wilson prit une photo du monstre sur ordre du gouvernement. La photo fit le tour du monde, mais, quelques années plus tard, Robert Kenneth Wilson avoua que la photo était un canular : il s'agissait d'un jouet en plastique. Il a même avoué que c'était lui qui avait tracé sur la berge de prétendues traces du monstre. Selon Peter Costello, qui écrivit en 1977 un livre intitulé A la recherche des monstres lacustres, il s'agirait d'un mammifère qui pourrait être une grosse otarie ou une loutre géante, et que l'on aurait confondu avec un monstre. Après cela, quelques expéditions ont été menées pour tenter d'attraper le monstre. Comme ces expéditions n'ont rien donné, ces chasseurs ont abandonné l'idée du monstre dans le lac… jusqu'à l'apparition d'une vidéo, réalisée en 2007, qui montre un mouvement dans l'eau. Aussitôt l'affaire reprit, et Neil Clark, paléontologue, déclara que le monstre serait seulement un moyen de faire du marketing. En effet, plusieurs rumeurs disent qu'en 1933, le directeur d'un cirque, Bertram Mills, faisait entrer ses éléphants dans l'eau lesquels ne sortaient que le haut de leur tête et de leur dos et la trompe, donnant l'impression d'un animal ayant deux bosses et un long cou.",
         proposition: [
