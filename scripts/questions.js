@@ -83,7 +83,7 @@ export const questions = [
     {
         question: "Quelles sont les principales recherches de la zone 51 ?",
         type: "unique",
-        reponse: 2,
+        reponse: 3,
         explication:
             "La célèbre zone 51 qui se trouve dans le désert du Nevada est une installation militaire de la zone d’opérations militaires de Nellis. La base est l’un des sites militaires les plus secrets du monde et elle ne peut être observée sur aucune carte ni aucun site Web du gouvernement. Bien évidemment, tant de secrets ont échauffé les esprits et cela a conduit de nombreuses personnes à élaborer des théories du complot sur la fameuse zone 51. La théorie la plus populaire concernant cet endroit dit qu’on y fait des recherches, voir des expériences sur des aliens qui auraient eu la malchance d’arriver sur Terre. Quoi qu’il en soit, personne ne sait avec certitude ce qu’est la zone 51. Le gouvernement n’a même jamais reconnu publiquement l’existence de la base avant 2013, Officiellement, l’installation est utilisée pour tester des avions expérimentaux de l’armée.",
         proposition: [
@@ -101,7 +101,7 @@ export const questions = [
             },
             {
                 id: 3,
-                text: "Les Cybermen",
+                text: "Militaire",
             },
         ],
         image: "https://lecafedugeek.fr/wp-content/uploads/2019/07/zone-51.jpg",
@@ -520,7 +520,7 @@ export const questions = [
     },
     {
         question:
-            "Qu'est ce qui ne va pas dans ce graphique ?(Plusieurs réponses peuvent être attendue)",
+            "Qu'est ce qui ne va pas dans ce graphique ?",
         type: "unique",
         reponse: 3,
         explication:
@@ -543,7 +543,7 @@ export const questions = [
                 text: "Le graphique est correct",
             },
         ],
-        image: "https://pbs.twimg.com/media/Dbx2x9cXcAAGB-e.jpg",
+        image: "https://www.liberation.fr/resizer/nPuvfAzhtIYHRkGPsqr2593NwsE=/400x225/filters:format(png):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/liberation/NOYFBPFMRXYURQDGYJSI4D4L7A.png",
     },
     {
         question: "Cet article est-il bien réel ?",
@@ -597,7 +597,7 @@ export const questions = [
                 text: "Faux",
             },
         ],
-        image: "https://www.thesun.ie/wp-content/uploads/sites/3/2017/01/gonzalo-higuian-sport_-preview-01-1.jpg",
+        image: "https://www.foottheball.com/wp-content/uploads/2017/01/gonzalo-higuain.jpg",
     },
     {
         question: "Quels outils pouvons-nous utiliser pour vérifier une image?",
