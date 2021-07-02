@@ -1,8 +1,9 @@
 #divCenter {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .btnReponse {
+    width: 50%;
     padding: 1rem;
     border: 2px solid #fff;
 }
@@ -17,15 +18,22 @@
 
 #choices {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
-}
-
-#imageComplotDiv {
-    width: 40%;
+    gap: 1rem;
 }
 
 .ireponses {
     max-width: 15rem;
+}
+
+@media screen and (max-width: 540px) {
+    .imgBarem {
+        width: 100%;
+    }
+
+    .btnReponse {
+        width: 100%;
+    }
 }

@@ -27,7 +27,7 @@ const display = {
                 text: "Tu as un bon esprit critique de base mais tu es encore loin du compte.",
             },
             {
-                image: "https://i.imgur.com/euRu9De.gif",
+                image: "https://thumbs.gfycat.com/InfiniteBitterDeer-max-1mb.gif",
                 text: "Tu as un très bon esprit critique, n'arrête jamais de réfléchir.",
             },
             {
@@ -39,8 +39,10 @@ const display = {
             <div class="resultat">
                 <h1>Quiz terminé !</h1>
                 <h3> Votre score est de : ${quiz.score} / ${quiz.maxQuestion}</h3>
-                <img src="${bareme[quiz.score].image}" alt="illustration de la note">
-                <p>${bareme[quiz.score].text}</p>
+                <img class="my-4 imgBarem" src="${
+                    bareme[quiz.score].image
+                }" alt="illustration de la note">
+                <p class="my-4" >${bareme[quiz.score].text}</p>
             </div>
         `;
         this.elementShown("quiz", endQuizHTML);
@@ -58,7 +60,7 @@ const display = {
 
     image: function () {
         const displayImage = quiz.getCurrentQuestion().image
-            ? `<img id="imagePres" class="imageComplot" src="${
+            ? `<img id="imagePres" class="imageComplot w-100" src="${
                   quiz.getCurrentQuestion().image
               }" alt="Illustration de la question"> `
             : "";
@@ -120,13 +122,13 @@ const display = {
         for (let i = 0; i < choices.length; i++) {
             if (type === "images") {
                 buildChoices += `
-                    <button id="guess${i}" class="btn btn-dark btn-lg btnReponse w-25">
+                    <button id="guess${i}" class="btn btn-dark btn-lg btnReponse ">
                         <img class="ireponses" src="${choices[i].text}" alt="choix${i}">
                     </button>
                 `;
             } else {
                 buildChoices += `
-                    <button id="guess${i}" class="btn btn-dark btn-lg btnReponse w-25">
+                    <button id="guess${i}" class="btn btn-dark btn-lg btnReponse">
                         <p id="choice${i}" class="mt-0 mb-0 presponses">${choices[i].text}</p>
                     </button>
                 `;
