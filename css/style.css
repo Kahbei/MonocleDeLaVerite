@@ -1,9 +1,5 @@
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
+#divCenter {
+    padding: 2rem;
 }
 
 .btnReponse {
@@ -13,12 +9,9 @@ body {
 
 .btnImage {
     height: 230px;
-    /* width: 15%!important; */
 }
 
 .imageComplot {
-    /* height: 100%;
-    width: 100%; */
     max-width: 30rem;
 }
 
