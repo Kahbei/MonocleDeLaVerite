@@ -102,7 +102,7 @@ const display = {
             if (type === "images") {
                 buildChoices += `
                     <button id="guess${i}" class="btn btn-dark btn-lg btnReponse w-25">
-                        <img class="ireponses imageComplot" src="${choices[i].text}" alt="choix${i}">
+                        <img class="ireponses" src="${choices[i].text}" alt="choix${i}">
                     </button>
                 `;
             } else {

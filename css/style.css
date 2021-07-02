@@ -1,36 +1,38 @@
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     height: 100%;
 }
 
-.btnReponse{
-    height: 40%;
-    width: 25%;
+.btnReponse {
+    padding: 1rem;
+    border: 2px solid #fff;
 }
 
-.btnImage{
+.btnImage {
     height: 230px;
     /* width: 15%!important; */
 }
 
-.imageComplot{
-    height: 100%;
-    width: 100%;
+.imageComplot {
+    /* height: 100%;
+    width: 100%; */
+    max-width: 30rem;
 }
 
-#imageComplotDiv{
+#choices {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#imageComplotDiv {
     width: 40%;
 }
 
-#response{
-    opacity: 1;
-    transition: opacity 1s;
+.ireponses {
+    max-width: 15rem;
 }
-
-#response.hide{
-    opacity: 0;
-}
-
