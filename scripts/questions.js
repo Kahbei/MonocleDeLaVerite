@@ -623,7 +623,7 @@ export const questions = [
                 text: "Tungstene",
             },
         ],
-        image: "http://www.exomakina.fr/eXo_maKina/Clonage_files/marine-global-437921-clonage2.jpg",
+        image: "http://4.bp.blogspot.com/-KpIQx_PODAk/VJ7qCwj7bdI/AAAAAAAAPCw/AJwI3oJt4xo/s1600/rouage%2B2.jpg",
     },
     {
         question:
