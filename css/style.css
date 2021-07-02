@@ -8,6 +8,12 @@
     border: 2px solid #fff;
 }
 
+.iAc {
+    width: 16rem !important;
+    border: solid 1px #000;
+    text-align: center;
+}
+
 .btnImage {
     height: 230px;
 }
