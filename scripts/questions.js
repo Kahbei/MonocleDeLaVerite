@@ -221,7 +221,7 @@ export const questions = [
         image: "https://th.bing.com/th/id/R4a18152f6ea947ef6c3b3ca0273953bf?rik=1HTdUoIQI89igQ&riu=http%3a%2f%2fayay.co.uk%2fbackgrounds%2fhistorical%2fnazi_third_reich%2fhitler-in-front-of-the-eiffel-tower.jpg&ehk=2Ne6IlCwximRlS%2bAnUWa%2fqFA%2bNS2osbFxktJKOOTjiU%3d&risl=&pid=ImgRaw",
     },
     {
-        question: "Cette photo est-elle trafiquée ?",
+        question: "Cette photo est-elle trafiquée ou truquée ?",
         type: "unique",
         reponse: 0,
         explication:
