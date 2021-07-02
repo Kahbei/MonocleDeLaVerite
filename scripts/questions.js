@@ -107,7 +107,7 @@ export const questions = [
         image: "https://lecafedugeek.fr/wp-content/uploads/2019/07/zone-51.jpg",
     },
     {
-        question: "Ce document est-il un document officiel du gouvernement ?",
+        question: "Ce image montre-t-elle un document officiel du gouvernement ?",
         type: "unique",
         reponse: 1,
         explication:
@@ -151,7 +151,7 @@ export const questions = [
         image: "https://www.allosymptomes.fr/wp-content/uploads/2017/01/sida.jpg",
     },
     {
-        question: "Qui a tué le président John F. Kennedy?",
+        question: "Qui a tué le président John F. Kennedy ?",
         type: "unique",
         reponse: 0,
         explication:
