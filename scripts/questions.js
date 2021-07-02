@@ -101,7 +101,7 @@ export const questions = [
             },
             {
                 id: 3,
-                text: "Militaire",
+                text: "Militaires",
             },
         ],
         image: "https://lecafedugeek.fr/wp-content/uploads/2019/07/zone-51.jpg",
@@ -171,7 +171,7 @@ export const questions = [
             },
             {
                 id: 3,
-                text: "Le service Secret Russe",
+                text: "Les services Secrets Russes",
             },
         ],
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/JFK_limousine.png/1200px-JFK_limousine.png",
@@ -299,7 +299,7 @@ export const questions = [
             },
             {
                 id: 2,
-                text: "il s'est suicidé",
+                text: "Il s'est suicidé",
             },
             {
                 id: 3,
